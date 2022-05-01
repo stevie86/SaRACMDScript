@@ -1,3 +1,7 @@
+
+$title    = 'SaRA EULA?'
+$question = 'Do you accept the EULA?'
+$choices  = '&Yes', '&No'
 $ProgressPreference = 'SilentlyContinue'
 $Destination = $env:TEMP +"\SaRACMD\LatestSaRACMD.zip"
 $Folder =  $env:TEMP +"\SaRACMD\"
@@ -10,7 +14,13 @@ if (Test-Path -Path $Destination) {
    explorer $env:TEMP
    Read-Host "Press any key to close script..."
 } else {
-New-Item -Path $Temp -Name "SaRACMD" -ItemType "directory" | Out-Null
+Start-Process "https://bing.com"
+
+
+$decision = $Host.UI.PromptForChoice($title, $question, $choices, 1)
+if ($decision -eq 0) {
+    Write-Host 'EULA Accepted'
+    New-Item -Path $Temp -Name "SaRACMD" -ItemType "directory" | Out-Null
 Invoke-WebRequest -uri https://aka.ms/SaRA_CommandLineVersionFiles -OutFile $Destination
 
 Expand-Archive $Destination -DestinationPath $Folder
@@ -23,5 +33,9 @@ cd $Folder
 explorer $env:localappdata\saralogs\UploadLogs
 
  Read-Host "Press any key to close script..."
+} else {
+    Write-Host 'EULA was not accepted'
+}
+
 
 }
