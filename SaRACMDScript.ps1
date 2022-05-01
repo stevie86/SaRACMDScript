@@ -1,4 +1,4 @@
-﻿$Destination = $env:TEMP +"\SaRACMD\LatestSaRACMD.zip"
+$Destination = $env:TEMP +"\SaRACMD\LatestSaRACMD.zip"
 $Folder =  $env:TEMP +"\SaRACMD\"
 $Temp = $env:TEMP
 $locerr = 'Folder SaRACMD already exists in' + $Temp + ', please delete it first!'
