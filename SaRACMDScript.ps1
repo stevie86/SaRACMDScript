@@ -1,3 +1,4 @@
+$ProgressPreference = 'SilentlyContinue'
 $Destination = $env:TEMP +"\SaRACMD\LatestSaRACMD.zip"
 $Folder =  $env:TEMP +"\SaRACMD\"
 $Temp = $env:TEMP
