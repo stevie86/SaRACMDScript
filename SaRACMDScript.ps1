@@ -7,6 +7,7 @@ $locerr = 'A folder named SaRACMD already exists in ' + $Temp + ', please delete
 
 if (Test-Path -Path $Destination) {
     $locerr
+   explorer $env:TEMP
     Read-Host " "
     Read-Host "Press any key to close script..."
 } else {
