@@ -8,8 +8,7 @@ $locerr = 'A folder named SaRACMD already exists in ' + $Temp + ', please delete
 if (Test-Path -Path $Destination) {
     $locerr
    explorer $env:TEMP
-    Read-Host " "
-    Read-Host "Press any key to close script..."
+   Read-Host "Press any key to close script..."
 } else {
 New-Item -Path $Temp -Name "SaRACMD" -ItemType "directory" | Out-Null
 Invoke-WebRequest -uri https://aka.ms/SaRA_CommandLineVersionFiles -OutFile $Destination
