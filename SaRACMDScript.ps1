@@ -1,7 +1,7 @@
 $Destination = $env:TEMP +"\SaRACMD\LatestSaRACMD.zip"
 $Folder =  $env:TEMP +"\SaRACMD\"
 $Temp = $env:TEMP
-$locerr = 'Folder SaRACMD already exists in' + $Temp + ', please delete it first!'
+$locerr = 'Folder SaRACMD already exists in ' + $Temp + ', please delete it first!'
 
 
 if (Test-Path -Path $Destination) {
