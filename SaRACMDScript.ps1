@@ -1,6 +1,6 @@
 
-$title    = 'SaRA EULA?'
-$question = 'Do you accept the EULA?'
+$title    = 'SaRA EULA'
+$question = 'Do you accept the SaRA application EULA?'
 $choices  = '&Yes', '&No'
 $ProgressPreference = 'SilentlyContinue'
 $Destination = $env:TEMP +"\SaRACMD\LatestSaRACMD.zip"
@@ -19,7 +19,7 @@ Start-Process "https://bing.com"
 
 $decision = $Host.UI.PromptForChoice($title, $question, $choices, 1)
 if ($decision -eq 0) {
-    Write-Host 'EULA Accepted'
+    Write-Host 'Starting SaRA Download'
     New-Item -Path $Temp -Name "SaRACMD" -ItemType "directory" | Out-Null
 Invoke-WebRequest -uri https://aka.ms/SaRA_CommandLineVersionFiles -OutFile $Destination
 
