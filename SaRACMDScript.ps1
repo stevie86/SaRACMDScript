@@ -24,7 +24,9 @@ Expand-Archive $Destination -DestinationPath $Folder
 
 sleep 5
 cd $Folder
-SaRAcmd.exe -DisplayEULA > $Folder\SaRAEula.txt
+
+.\SaRAcmd.exe -DisplayEULA > $Folder\SaRAEula.txt
+
 $decision = $Host.UI.PromptForChoice($title, $question, $choices, 1)
 if ($decision -eq 0) {
 
