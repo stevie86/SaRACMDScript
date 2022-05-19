@@ -1,6 +1,5 @@
 
 $title    = 'SaRA EULA'
-
 $choices  = '&Yes', '&No'
 $ProgressPreference = 'SilentlyContinue'
 $Destination = $env:TEMP +"\SaRACMD\LatestSaRACMD.zip"
