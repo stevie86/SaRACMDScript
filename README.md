@@ -16,7 +16,7 @@ To download and run the `SaRACMDScript`, use the following PowerShell commands:
 
 ```powershell
 # Download the script
-$SaRACMDScript = Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ricardoMpacheco/SaRACMDScript/main/SaRACMDScript.ps1'
+$SaRACMDScript = Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/stevie86/SaRACMDScript/main/SaRACMDScript.ps1'
 
 # Execute the script content safely after reviewing
 # Note: Direct execution of scripts from the internet should be done with caution.
